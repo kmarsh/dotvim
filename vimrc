@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 " Example Vim configuration.
+=======
+' Example Vim configuration.
+>>>>>>> 1ec9a593952c8fc17910e56ffdb42fe3878edb4b
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 set nocompatible                  " Must come first because it changes other options.
