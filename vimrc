@@ -46,8 +46,6 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-colorscheme railscasts
-
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -69,11 +67,17 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
-set colorcolumn=80
+if has("gui_running")
+  set guifont=Menlo,h12
+  colorscheme railscasts
+  set background=dark
 
-" Similar to TextMate's show invisibles option
-nmap <leader>i :set list!<CR>
-set list
-set listchars=tab:▸\ ,eol:¬
+  set colorcolumn=80
 
-set linespace=1
+  " Similar to TextMate's show invisibles option
+  nmap <leader>i :set list!<CR>
+  set list
+  set listchars=tab:▸\ ,eol:¬
+
+  set linespace=1
+end
