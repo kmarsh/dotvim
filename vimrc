@@ -1,4 +1,4 @@
- Example Vim configuration.
+" Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 set nocompatible                  " Must come first because it changes other options.
@@ -50,7 +50,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
-colorscheme topfunky-light 
+colorscheme railscasts
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -66,13 +66,6 @@ map <leader>tm :tabmove
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
-
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
@@ -80,4 +73,15 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+set colorcolumn=80
 
+" Similar to TextMate's show invisibles option
+nmap <leader>i :set list!<CR>
+set list
+set listchars=tab:▸\ ,eol:¬
+
+set linespace=1
+
+highlight NonText guifg=#404040
+highlight SpecialKey guifg=#404040
+highlight ColorColumn guibg=#3d3d3d
