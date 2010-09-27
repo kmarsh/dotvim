@@ -95,3 +95,8 @@ hi PMenuSbar guibg=#5A647E gui=NONE
 " thumb of the scrollbar in the popup
 hi PMenuThumb guibg=#AAAAAA gui=NONE
 
+" Invisibles
+hi NonText guifg=#404040
+hi SpecialKey guifg=#404040
+hi ColorColumn guibg=#3d3d3d
+

@@ -46,7 +46,6 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
 colorscheme railscasts
 
 " Tab mappings.
@@ -78,7 +77,3 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 set linespace=1
-
-highlight NonText guifg=#404040
-highlight SpecialKey guifg=#404040
-highlight ColorColumn guibg=#3d3d3d
